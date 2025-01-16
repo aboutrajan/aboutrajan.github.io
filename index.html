@@ -6,109 +6,216 @@
     <title>Rajan Kumar - Portfolio</title>
     <style>
         html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 10rem;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-            scroll-behavior: smooth;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 3rem 0 1.5rem;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            padding: 1rem;
-            background-color: #444;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 999;
-        }
-        nav a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #ff6347;
-        }
-        .container {
-            width: 80%;
-            margin: 12.5rem auto 2rem auto;
-        }
-        section {
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        section:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-        }
-        h2, h3 {
-            color: #333;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem 0;
-            background-color: #333;
-            color: white;
-        }
-        .contact {
-            list-style-type: none;
-            padding: 0;
-        }
-        .contact li {
-            margin-bottom: 0.5rem;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        a:hover {
-            color: #ff6347;
-        }
-        #scrollToTop {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            padding: 10px 15px;
-            font-size: 18px;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-        }
-        #scrollToTop:hover {
-            background-color: #ff6347;
-        }
-        p, ul li {
-            line-height:25px;
-        }
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 3rem 0 1.5rem;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #444;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff6347;
+}
+
+.container {
+    width: 80%;
+    margin: 12.5rem auto 2rem auto;
+}
+
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+h2, h3 {
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #333;
+    color: white;
+}
+
+.contact {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact li {
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6347;
+}
+
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#scrollToTop:hover {
+    background-color: #ff6347;
+}
+
+p, ul li {
+    line-height: 25px;
+}
+
+/* ---------------------------- Responsive Styles ---------------------------- */
+
+/* Mobile (less than 768px wide) */
+@media (max-width: 767px) {
+    header {
+        padding: 2rem 0 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 90%;
+        margin-top: 15rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 1.5rem 0;
+    }
+
+    #scrollToTop {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+}
+
+/* Tablet (768px to 1024px wide) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        padding: 3rem 0 1.5rem;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    nav a {
+        margin: 0 1rem;
+        font-size: 1.1rem;
+    }
+
+    .container {
+        width: 85%;
+        margin-top: 12rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    footer {
+        padding: 2rem 0;
+    }
+
+    #scrollToTop {
+        padding: 10px 15px;
+        font-size: 18px;
+    }
+}
+
+/* Large screens (desktop) */
+@media (min-width: 1025px) {
+    .container {
+        width: 80%;
+        margin-top: 12.5rem;
+    }
+}
     </style>
 </head>
 <body>
