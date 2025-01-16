@@ -127,12 +127,36 @@ p, ul li {
     line-height: 25px;
 }
 
+.profile-image{
+  width: 134px;
+  height: auto;
+  border-radius: 50%;
+  margin: 55px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  margin-left: 20px;
+}
+
 /* ---------------------------- Responsive Styles ---------------------------- */
 
 /* Mobile (less than 768px wide) */
 @media (max-width: 767px) {
     header {
-        padding: 2rem 0 1rem;
+        position: absolute;
+        top: initial;
+    }
+    .profile-image{
+    width: 97px;
+    height: auto;
+    border-radius: 50%;
+    margin: 0;
+    position: initial;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin-left: 0;
     }
 
     nav {
@@ -148,7 +172,8 @@ p, ul li {
 
     .container {
         width: 90%;
-        margin-top: 15rem;
+        margin-top: 12rem;
+        padding-top: 20rem;
     }
 
     section {
@@ -220,7 +245,7 @@ p, ul li {
 </head>
 <body>
     <header>
-        <img src="photo.jpg" alt="Rajan Kumar" style="width: 134px;height: auto;border-radius: 50%;margin: 55px 0;position: absolute;top: 0;left: 0;z-index: 1000;margin-left: 20px;">
+        <img src="photo.jpg" class="profile-image" alt="Rajan Kumar">
         <h1>Rajan Kumar</h1>
         <p>Software Engineer | Front-end Developer</p>
         <nav>
