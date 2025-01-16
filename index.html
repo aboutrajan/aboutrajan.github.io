@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rajan Kumar - Portfolio</title>
     <style>
-        html {
+html {
     scroll-behavior: smooth;
     scroll-padding-top: 10rem;
 }
@@ -143,8 +143,11 @@ p, ul li {
 
 /* Mobile (less than 768px wide) */
 @media (max-width: 767px) {
+    html {
+    scroll-padding-top: 30rem;
+    }
     header {
-        position: absolute;
+        position: fixed;
         top: initial;
     }
     .profile-image{
