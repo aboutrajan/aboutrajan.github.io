@@ -244,6 +244,35 @@ p, ul li {
         margin-top: 12.5rem;
     }
 }
+
+   /* Hamburger icon visible only on small screens */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mobile menu */
+@media (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #444;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
     </style>
 </head>
 <body>
@@ -251,7 +280,8 @@ p, ul li {
         <img src="photo.jpg" class="profile-image" alt="Rajan Kumar">
         <h1>Rajan Kumar</h1>
         <p>Software Engineer | Front-end Developer</p>
-        <nav>
+        <div id="hamburger" class="hamburger">☰</div>
+        <nav id="nav-links"  class="nav-links">
             <a href="#summary">Summary</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
@@ -412,6 +442,12 @@ p, ul li {
         scrollToTopBtn.onclick = function() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+        
+        hamburger.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+        });
     </script>
 </body>
 </html>
